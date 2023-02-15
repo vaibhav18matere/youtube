@@ -11,12 +11,12 @@ export default function Navbar() {
     <div className="flex justify-between items-center px-14 h-14 bg-[#212121] opacity-95 sticky top-0 z-50">
       <div className="flex gap-8 items-center text-2xl">
         <div>
-          <GiHamburgerMenu className="text-white cursor-pointer" />
+          <GiHamburgerMenu className="cursor-pointer" />
         </div>
         <Link to="/">
           <div className="flex gap-1 items-center justify-center">
             <BsYoutube className="text-3xl text-red-500" />
-            <span className="text-xl font-medium text-white tracking-wider">YouTube</span>
+            <span className="text-xl font-medium tracking-wider">YouTube</span>
           </div>
         </Link>
       </div>
@@ -29,18 +29,18 @@ export default function Navbar() {
                 placeholder="Search"
                 className="w-96 bg-zinc-900 focus:outline-none"/>
               <AiOutlineClose
-                className="text-xl cursor-pointer text-white"/>
+                className="text-xl cursor-pointer"/>
             </div>
             <button className="h-10 w-16 flex items-center justify-center bg-zinc-800">
-              <AiOutlineSearch className="text-xl text-white" />
+              <AiOutlineSearch className="text-xl" />
             </button>
           </div>
         </form>
-        <div className="text-xl p-3 bg-zinc-900 rounded-full text-white cursor-pointer">
+        <div className="text-xl p-3 bg-zinc-900 rounded-full cursor-pointer">
           <TiMicrophone />
         </div>
       </div>
-      <div className="flex gap-5 items-center text-xl text-white cursor-pointer">
+      <div className="flex gap-5 items-center text-xl cursor-pointer">
         <BsCameraVideo />
         <IoAppsSharp />
         <div className="relative">

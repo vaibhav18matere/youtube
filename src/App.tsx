@@ -1,13 +1,10 @@
 import React from 'react';
-import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        Youtube App
-      </header>
-    </div>
+    <h1 className="text-3xl font-bold underline">
+      Youtube App
+    </h1>
   );
 }
 

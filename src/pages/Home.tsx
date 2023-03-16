@@ -7,16 +7,23 @@ import Sidebar from "../components/Sidebar";
 import Card from "../components/Card";
 import Spinner from "./Spinner";
 import { HomePageVideos } from "../Types";
+import { clearVideos } from "../store";
 
 export default function Home() {
-  const dispatch:any = useAppDispatch();
+  const dispatch: any = useAppDispatch();
   const videos = useAppSelector((state) => state.youtubeApp.videos);
+
+  useEffect(() => {
+    return () => {
+      dispatch(clearVideos());
+    };
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(getHomePageVideos(false));
   }, [dispatch]);
 
- return (
+  return (
     <div className="max-h-screen overflow-hidden">
       <div style={{ height: "7.5vh" }}>
         <Navbar />

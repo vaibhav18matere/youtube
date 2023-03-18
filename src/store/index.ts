@@ -1,7 +1,9 @@
-import { getHomePageVideos } from "./reducers/getHomePageVideos";
 import { PayloadAction, configureStore, createSlice } from "@reduxjs/toolkit";
+import { getRecommendedVideos } from './reducers/getRecommendedVideos';
+import { getHomePageVideos } from "./reducers/getHomePageVideos";
 import { InitialState } from "../Types";
 import { getSearchPageVideos } from "./reducers/getSearchPageVideos";
+import { getVideoDetails } from './reducers/getVideoDetails';
 
 const initialState: InitialState = {
   videos: [],
@@ -35,6 +37,13 @@ const YoutubeSlice = createSlice({
     builder.addCase(getSearchPageVideos.fulfilled, (state, action) => {
       state.videos = action.payload.parsedData;
       state.nextPageToken = action.payload.nextPageToken;
+    });
+    builder.addCase(getVideoDetails.fulfilled, (state, action) => {
+      state.currentPlaying = action.payload;
+    });
+    builder.addCase(getRecommendedVideos.fulfilled, (state, action) => {
+      state.recommendedVideos
+        = action.payload.parsedData;
     });
   },
 });

@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import Spinner from "./Spinner";
 import { HomePageVideos } from "../Types";
 import { clearVideos } from "../store";
-import { useNavigate } from "react-router-dom";
 import { getSearchPageVideos } from "../store/reducers/getSearchPageVideos";
 import SearchCard from "../components/SearchCard";
 

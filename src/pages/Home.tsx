@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../store/hooks";
-import { getHomePageVideos } from "../store/reducers/getHomePageVideos";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
@@ -8,6 +6,8 @@ import Card from "../components/Card";
 import Spinner from "./Spinner";
 import { HomePageVideos } from "../Types";
 import { clearVideos } from "../store";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { getHomePageVideos } from "../store/reducers/getHomePageVideos";
 
 export default function Home() {
   const dispatch: any = useAppDispatch();
